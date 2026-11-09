@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Performance Dashboard | Abdul Aziz Muktadir</title>
+  <meta name="description" content="Dashboard KPI dari 500 transaksi untuk mengukur performa penjualan.">
+  <script>(function(){var d=document.documentElement;d.classList.add('js');var s=null;try{s=localStorage.getItem('theme')}catch(e){}var dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;d.setAttribute('data-theme',s||(dark?'dark':'light'));})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="detail-page">
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 10.5h10.6L20.5 7H6.4M9.5 19.5h.01M17 19.5h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bottle" viewBox="0 0 24 24"><path d="M9 3h6v3H9zM8 6h8l1.5 3.5V19a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9.5L8 6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h2v2h-2zM18 14h2v2h-2zM14 18h2v2h-2zM18 18h2v2h-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <header class="island" id="island">
+    <a href="../index.html#home" class="island__logo" aria-label="Beranda"><img src="../images/foto.jpg" alt="" onerror="this.replaceWith('A')"></a>
+
+    <div class="island__body"><div class="island__inner">
+
+    <nav class="island__nav" id="nav" aria-label="Navigasi utama">
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#projects">Project</a>
+      <a href="../index.html#education">Education</a>
+      <a href="../index.html#connect" class="nav-extra">Contact</a>
+    </nav>
+
+    <a href="../CV.pdf" target="_blank" rel="noopener" class="island__cv">Lihat CV</a>
+
+    <a href="../index.html#connect" class="island__cta">
+      Let's Connect
+      <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+
+    <button class="island__btn" id="themeToggle" aria-label="Ganti tema">
+      <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" fill="currentColor"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>
+    </button>
+
+    <button class="island__btn island__menu" id="menuToggle" aria-label="Buka menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    </div></div>
+  </header>
+
+  <main>
+    <div class="pd pd--da">
+
+      <!-- Kiri: judul dan angka utama -->
+      <div class="pd__side pd__head">
+        <a class="pd__back reveal" href="../index.html#projects">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Kembali
+        </a>
+
+        <div class="pd__icon reveal" style="--d:.05s"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chart"/></svg></div>
+        <p class="pd__type reveal" style="--d:.1s">Personal Project · Power BI</p>
+        <h1 class="pd__title reveal" style="--d:.15s">Dashboard KPI dari 500 transaksi untuk mengukur performa penjualan.</h1>
+        <div class="stats pd__stats reveal" style="--d:.2s"><div class="stat"><strong>500</strong><span>transaksi</span></div><div class="stat"><strong>332</strong><span>pelanggan</span></div><div class="stat"><strong>38,3%</strong><span>sales dari Electronics</span></div><div class="stat"><strong>~5%</strong><span>margin profit</span></div></div>
+      </div>
+
+      <!-- Kolom kanan: visual preview -->
+      <div class="pd__main">
+        <h2 class="reveal">Visual preview</h2>
+        <p class="pd__lead reveal">Beberapa tampilan utama untuk memberi konteks cara project ini bekerja.</p>
+
+        <div class="pd__shots">
+          <div class="glow reveal"><div class="preview">
+            <div class="ph"><svg viewBox="0 0 24 24"><use href="#i-chart"/></svg><span>Tambahkan images/sales-dashboard.png</span></div>
+            <img src="../images/sales-dashboard.png" alt="Dashboard Sales Performance" loading="lazy" onerror="this.remove()">
+          </div></div>
+        </div>
+      </div>
+
+      <!-- Bawah: konten selebar halaman -->
+      <div class="pd__rest">
+        <section class="pd__section reveal">
+          <p class="pd__label">Business Questions</p>
+          <ol class="pd__qs"><li><strong>Bagaimana performa penjualan secara keseluruhan?</strong><span>Total Sales 43M dan Total Profit 2M dari 500 order dan 332 pelanggan, dengan Avg Order Value 86,30K.</span></li><li><strong>Bagaimana tren sales dan profit per bulan?</strong><span>Sales tertinggi terjadi pada Januari dan Maret, terendah pada Juli, lalu naik kembali menjelang akhir tahun. Profit jauh lebih kecil dan relatif datar sepanjang tahun.</span></li><li><strong>Sub-kategori mana yang paling berkontribusi?</strong><span>Printers memimpin, disusul Bookcases dan Saree, sedangkan Stole dan Accessories paling rendah. Profit tiap sub-kategori sangat tipis, dan Tables sedikit di bawah nol.</span></li><li><strong>Kategori mana yang kontribusi sales-nya terbesar?</strong><span>Electronics 38,3%, Clothing 32,2%, dan Furniture 29,5%. Kontribusinya cukup merata, dengan Electronics sedikit di depan.</span></li><li><strong>Kota mana yang paling kuat dari sisi sales dan profit?</strong><span>Indore memimpin sales (7,9M), jauh di atas Pune (3,3M) dan Delhi (2,5M). Untuk profit, Pune tertinggi (0,45M), disusul Indore (0,42M) dan Delhi (0,35M).</span></li><li><strong>Seberapa sehat margin profit?</strong><span>Profit 2M dari sales 43M berarti margin sekitar 5%, tergolong tipis. Ini menjadi area evaluasi utama.</span></li></ol>
+        </section>
+
+        
+
+        <div class="pd__cols">
+          <div class="pd__col">
+          <section class="pd__section reveal">
+          <p class="pd__label">Overview</p>
+          <div class="pd__text">
+            <p>Project mandiri di Power BI untuk mengukur performa penjualan dari 500 transaksi dan 332 pelanggan berdasarkan waktu, kategori produk, dan wilayah.</p>
+            <p>Dashboard KPI memuat Total Sales, Total Profit, Total Order, dan Avg Order Value, lengkap dengan breakdown tren bulanan, sub-kategori, dan kota.</p>
+            <p>Electronics menjadi kontributor sales terbesar (38,3%), sementara margin profit yang tipis (sekitar 5%) menjadi area evaluasi utama.</p>
+          </div>
+        </section>
+          </div>
+          <div class="pd__col">
+          <section class="pd__section reveal">
+          <p class="pd__label">Stack</p>
+          <div class="project__tags pd__stack"><span>Power BI</span></div>
+        </section>
+
+          <section class="pd__section reveal">
+          <p class="pd__label">Link</p>
+          <div class="pd__links"><a class="btn btn--solid" href="https://www.kaggle.com/datasets/danishbaariq/analysis-ecommerce-sales-and-profit-2026" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>Dataset (Kaggle)</a></div>
+        </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project lainnya -->
+    <section class="others">
+      <h2 class="subtitle reveal">Project lainnya</h2>
+      <div class="grid grid--2">
+        <a class="pcard reveal" href="sistem-parfum.html" aria-label="Lihat detail Sistem Informasi Parfum Berbasis Web">
+          <div class="glow"><div class="preview">
+            <div class="ph"><svg viewBox="0 0 24 24"><use href="#i-bottle"/></svg><span>Preview project</span></div>
+            <img src="../images/sistem-parfum.png" alt="Tampilan Sistem Informasi Parfum Berbasis Web" loading="lazy" onerror="this.remove()">
+          </div></div>
+          <h3>Sistem Informasi Parfum Berbasis Web</h3>
+        </a>
+        <a class="pcard reveal" style="--d:.08s" href="kasir-qr.html" aria-label="Lihat detail Sistem Pembayaran dan Kasir Berbasis QR Code">
+          <div class="glow"><div class="preview">
+            <div class="ph"><svg viewBox="0 0 24 24"><use href="#i-qr"/></svg><span>Preview project</span></div>
+            <img src="../images/kasir-qr.png" alt="Prototipe Sistem Pembayaran dan Kasir Berbasis QR Code" loading="lazy" onerror="this.remove()">
+          </div></div>
+          <h3>Sistem Pembayaran dan Kasir Berbasis QR Code</h3>
+        </a>
+        <a class="pcard reveal" href="amazon-sales.html" aria-label="Lihat detail Amazon Sales Performance Analysis">
+          <div class="glow"><div class="preview">
+            <div class="ph"><svg viewBox="0 0 24 24"><use href="#i-chart"/></svg><span>Preview project</span></div>
+            <img src="../images/amazon-sales.png" alt="Dashboard Amazon Sales Performance Analysis" loading="lazy" onerror="this.remove()">
+          </div></div>
+          <h3>Amazon Sales Performance Analysis</h3>
+        </a>
+        <a class="pcard reveal" style="--d:.08s" href="wisata-lima-kota.html" aria-label="Lihat detail Analisis Destinasi Wisata Lima Kota">
+          <div class="glow"><div class="preview">
+            <div class="ph"><svg viewBox="0 0 24 24"><use href="#i-map"/></svg><span>Preview project</span></div>
+            <img src="../images/wisata-lima-kota.png" alt="Dashboard Analisis Destinasi Wisata Lima Kota" loading="lazy" onerror="this.remove()">
+          </div></div>
+          <h3>Analisis Destinasi Wisata Lima Kota</h3>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pd-footer">
+    <p>© <span id="year">2026</span> <span class="pd-footer__name">Abdul Aziz Muktadir</span>. Portfolio.</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

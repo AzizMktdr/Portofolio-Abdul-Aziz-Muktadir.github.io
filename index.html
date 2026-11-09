@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdul Aziz Muktadir | Portfolio</title>
+  <meta name="description" content="Portfolio Abdul Aziz Muktadir, mahasiswa Informatika dengan fokus Data Analytics.">
+  <script>(function(){var d=document.documentElement;d.classList.add('js');var s=null;try{s=localStorage.getItem('theme')}catch(e){}var dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;d.setAttribute('data-theme',s||(dark?'dark':'light'));})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ikon untuk placeholder preview project -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 10.5h10.6L20.5 7H6.4M9.5 19.5h.01M17 19.5h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bottle" viewBox="0 0 24 24"><path d="M9 3h6v3H9zM8 6h8l1.5 3.5V19a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9.5L8 6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h2v2h-2zM18 14h2v2h-2zM14 18h2v2h-2zM18 18h2v2h-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <!-- ============ HEADER: floating pill ============ -->
+  <header class="island" id="island">
+    <a href="#home" class="island__logo" aria-label="Beranda"><img src="images/foto.jpg" alt="" onerror="this.replaceWith('A')"></a>
+
+    <div class="island__body"><div class="island__inner">
+
+    <nav class="island__nav" id="nav" aria-label="Navigasi utama">
+      <a href="#skills">Skills</a>
+      <a href="#projects">Project</a>
+      <a href="#education">Education</a>
+      <a href="#certificates">Sertifikat</a>
+      <a href="#connect" class="nav-extra">Contact</a>
+    </nav>
+
+    <a href="CV.pdf" target="_blank" rel="noopener" class="island__cv">Lihat CV</a>
+
+    <a href="#connect" class="island__cta">
+      Let's Connect
+      <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+
+    <button class="island__btn" id="themeToggle" aria-label="Ganti tema">
+      <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" fill="currentColor"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>
+    </button>
+
+    <button class="island__btn island__menu" id="menuToggle" aria-label="Buka menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    </div></div>
+  </header>
+
+  <main>
+
+    <!-- ============ HOME ============ -->
+    <section class="hero" id="home">
+      <div class="hero__text">
+        <h1 class="reveal">Halo! Saya Abdul Aziz Muktadir</h1>
+        <p class="hero__role reveal" style="--d:.08s" aria-label="Aspiring Data Analyst"><span id="typedRole" aria-hidden="true">Aspiring Data Analyst</span><span class="hero__cursor" aria-hidden="true"></span></p>
+        <p class="hero__lead reveal" style="--d:.16s">
+          Mengubah data menjadi insight lewat Python, SQL, Excel, dan Power BI,
+          dari data cleaning sampai dashboard interaktif. Saat ini mencari
+          kesempatan Data Analyst Intern.
+        </p>
+        <div class="hero__actions reveal" style="--d:.24s">
+          <a href="#projects" class="btn btn--blue">Lihat Project</a>
+          <a href="CV.pdf" target="_blank" rel="noopener" class="btn btn--outline">Lihat CV</a>
+        </div>
+      </div>
+      <div class="hero__lanyard" id="lanyard"><img class="hero__photo" src="images/foto.jpg" alt="Foto Abdul Aziz Muktadir" onerror="this.remove()"></div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <h2 class="section__title reveal">Skills</h2>
+      <p class="section__lead reveal">Tools dan teknologi yang saya pakai di project analisis data dan pengembangan sistem.</p>
+
+      <!-- Infinite horizontal marquee -->
+      <div class="marquee reveal" aria-label="Tools dan teknologi">
+        <div class="marquee__track" id="marqueeTrack">
+          <div class="tool"><i class="devicon-python-plain"></i><span>Python</span></div>
+          <div class="tool"><i class="devicon-pandas-plain"></i><span>Pandas</span></div>
+          <div class="tool"><i class="devicon-numpy-plain"></i><span>NumPy</span></div>
+          <div class="tool"><i class="devicon-matplotlib-plain"></i><span>Matplotlib</span></div>
+          <div class="tool"><i class="devicon-jupyter-plain"></i><span>Jupyter</span></div>
+          <div class="tool"><i class="devicon-googlecolab-plain"></i><span>Google Colab</span></div>
+          <div class="tool"><i class="devicon-kaggle-original"></i><span>Kaggle</span></div>
+          <div class="tool"><svg class="tool__svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="7"/><path d="M17 17l14 14M31 17L17 31"/></svg><span>Excel</span></div>
+          <div class="tool"><svg class="tool__svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="24" cy="12" rx="14" ry="6"/><path d="M10 12v12c0 3.3 6.3 6 14 6s14-2.7 14-6V12M10 24v12c0 3.3 6.3 6 14 6s14-2.7 14-6V24"/></svg><span>SQL</span></div>
+          <div class="tool"><i class="devicon-mysql-original"></i><span>MySQL</span></div>
+          <div class="tool"><svg class="tool__svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="30" y="6" width="11" height="36" rx="3" fill="currentColor" stroke="none"/><rect x="18" y="17" width="9" height="25" rx="3" fill="currentColor" stroke="none" opacity=".7"/><rect x="7" y="27" width="8" height="15" rx="3" fill="currentColor" stroke="none" opacity=".45"/></svg><span>Power BI</span></div>
+          <div class="tool"><svg class="tool__svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="9" width="30" height="26" rx="4"/><path d="M6 18h30M6 27h30M16 9v26"/><path d="M33 40h10m0 0l-4-4m4 4l-4 4"/></svg><span>Power Query</span></div>
+          <div class="tool"><svg class="tool__svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M29 9c-5 0-6 3-7 8l-2 14c-1 5-2 8-7 8M13 20h16"/><path d="M28 28l10 12M38 28L28 40"/></svg><span>DAX</span></div>
+          <div class="tool"><i class="devicon-laravel-original"></i><span>Laravel</span></div>
+          <div class="tool"><i class="devicon-php-plain"></i><span>PHP</span></div>
+          <div class="tool"><i class="devicon-figma-plain"></i><span>Figma</span></div>
+          <div class="tool"><svg class="tool__svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="7"/><rect x="12" y="12" width="10" height="8" rx="2"/><rect x="26" y="28" width="10" height="8" rx="2"/><path d="M17 20v6a2 2 0 002 2h7"/></svg><span>Draw.io</span></div>
+          <div class="tool"><i class="devicon-github-original"></i><span>GitHub</span></div>
+          <div class="tool"><i class="devicon-vscode-plain"></i><span>VS Code</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <h2 class="section__title reveal">Project</h2>
+      <p class="section__lead reveal">Project data analytics dan pengembangan sistem. Klik kartu untuk melihat detailnya.</p>
+
+      <div class="grid grid--2">
+
+        <a class="pcard reveal" href="projects/amazon-sales.html" aria-label="Lihat detail Amazon Sales Performance Analysis">
+          <div class="glow"><div class="preview">
+            <div class="ph"><svg viewBox="0 0 24 24"><use href="#i-chart"/></svg><span>Preview project</span></div>
+            <img src="images/amazon-sales.png" alt="Dashboard Amazon Sales Performance Analysis" loading="lazy" onerror="this.remove()">
+          </div></div>
+          <h3>Amazon Sales Performance Analysis</h3>
+          <p class="pcard__meta">Python · Pandas · Power BI · DAX</p>
+          <p class="pcard__desc">128.975 baris transaksi: pendapatan, kategori, status pesanan, fulfilment, wilayah, dan cancellation rate.</p>
+        </a>
+
+        <a class="pcard reveal" style="--d:.08s" href="projects/wisata-lima-kota.html" aria-label="Lihat detail Analisis Destinasi Wisata Lima Kota">
+          <div class="glow"><div class="preview">
+            <div class="ph"><svg viewBox="0 0 24 24"><use href="#i-map"/></svg><span>Preview project</span></div>
+            <img src="images/wisata-lima-kota.png" alt="Dashboard Analisis Destinasi Wisata Lima Kota" loading="lazy" onerror="this.remove()">
+          </div></div>
+          <h3>Analisis Destinasi Wisata Lima Kota</h3>
+          <p class="pcard__meta">Power BI · Power Query · DAX</p>
+          <p class="pcard__desc">437 destinasi wisata berdasarkan kota, kategori, rating, dan lokasi.</p>
+        </a>
+
+        <a class="pcard reveal" href="projects/unilever-sales.html" aria-label="Lihat detail Unilever Sales Analysis">
+          <div class="glow"><div class="preview">
+            <div class="ph"><svg viewBox="0 0 24 24"><use href="#i-cart"/></svg><span>Preview project</span></div>
+            <img src="images/unilever-sales.png" alt="Dashboard Unilever Sales Analysis" loading="lazy" onerror="this.remove()">
+          </div></div>
+          <h3>Unilever Sales Analysis</h3>
+          <p class="pcard__meta">Python · Pandas · Power BI</p>
+          <p class="pcard__desc">Data cleaning dan dashboard penjualan: brand, kategori, channel, market, dan tren per hari.</p>
+        </a>
+
+        <a class="pcard reveal" style="--d:.08s" href="projects/sales-dashboard.html" aria-label="Lihat detail Sales Performance Dashboard">
+          <div class="glow"><div class="preview">
+            <div class="ph"><svg viewBox="0 0 24 24"><use href="#i-chart"/></svg><span>Preview project</span></div>
+            <img src="images/sales-dashboard.png" alt="Dashboard Sales Performance" loading="lazy" onerror="this.remove()">
+          </div></div>
+          <h3>Sales Performance Dashboard</h3>
+          <p class="pcard__meta">Power BI</p>
+          <p class="pcard__desc">500 transaksi dari 332 pelanggan: waktu, kategori produk, dan wilayah.</p>
+        </a>
+
+        <a class="pcard reveal" href="projects/sistem-parfum.html" aria-label="Lihat detail Sistem Informasi Parfum Berbasis Web">
+          <div class="glow"><div class="preview">
+            <div class="ph"><svg viewBox="0 0 24 24"><use href="#i-bottle"/></svg><span>Preview project</span></div>
+            <img src="images/sistem-parfum.png" alt="Tampilan Sistem Informasi Parfum Berbasis Web" loading="lazy" onerror="this.remove()">
+          </div></div>
+          <h3>Sistem Informasi Parfum Berbasis Web</h3>
+          <p class="pcard__meta">Laravel · Filament · MySQL · UML</p>
+          <p class="pcard__desc">Katalog dan review parfum lokal: pencarian, review, favorit, komunitas, koleksi, dan panel admin.</p>
+        </a>
+
+        <a class="pcard reveal" style="--d:.08s" href="projects/kasir-qr.html" aria-label="Lihat detail Sistem Pembayaran dan Kasir Berbasis QR Code">
+          <div class="glow"><div class="preview">
+            <div class="ph"><svg viewBox="0 0 24 24"><use href="#i-qr"/></svg><span>Preview project</span></div>
+            <img src="images/kasir-qr.png" alt="Prototipe Sistem Pembayaran dan Kasir Berbasis QR Code" loading="lazy" onerror="this.remove()">
+          </div></div>
+          <h3>Sistem Pembayaran dan Kasir Berbasis QR Code</h3>
+          <p class="pcard__meta">Figma · UML · ERD</p>
+          <p class="pcard__desc">Kasir kafe dengan kode pesanan di meja: analisis, UML, ERD, dan prototipe pembayaran tunai dan QRIS.</p>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section" id="education">
+      <h2 class="section__title reveal">Education</h2>
+      <ol class="timeline">
+        <li class="reveal">
+          <span class="timeline__date">IPK 3,96 / 4,00</span>
+          <h3>Universitas Bina Sarana Informatika</h3>
+          <p>Informatika · Kota Tangerang, Banten. Mempelajari analisis data, basis data, analisis sistem, dan pengembangan web lewat project mandiri dan akademik.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ CERTIFICATES ============ -->
+    <section class="section" id="certificates">
+      <h2 class="section__title reveal">Sertifikat</h2>
+      <p class="section__lead reveal">Kursus dan pelatihan data yang sudah saya selesaikan. Klik kartu untuk membuka sertifikat (PDF).</p>
+      <div class="marquee marquee--certs reveal" aria-label="Daftar sertifikat">
+        <div class="marquee__track" id="certTrack">
+        <a class="cert" href="certificates/lsp-bsi-analis-program.jpg" target="_blank" rel="noopener" aria-label="Lihat sertifikat Analis Program">
+          <div class="cert__img"><img src="certificates/lsp-bsi-analis-program.jpg" alt="Sertifikat Analis Program" loading="lazy"></div>
+          <div class="cert__body">
+            <span class="cert__tag">Kompeten</span>
+            <h3>Analis Program</h3>
+            <p>LSP BSI · Uji Kompetensi · 21 Jul 2026</p>
+            <span class="cert__id">Status: KOMPETEN · No. Reg: TIK-2026060046</span>
+          </div>
+        </a>
+        <a class="cert" href="certificates/revou-intro-data-analytics.pdf" target="_blank" rel="noopener" aria-label="Lihat sertifikat Intro to Data Analytics">
+          <div class="cert__img"><img src="certificates/revou-intro-data-analytics.jpg" alt="Sertifikat Intro to Data Analytics" loading="lazy"></div>
+          <div class="cert__body">
+            <span class="cert__tag">Data Analytics</span>
+            <h3>Intro to Data Analytics</h3>
+            <p>RevoU · Mini Course · 30 Okt 2026</p>
+            <span class="cert__id">ID: DAMC-261026-01-1-00336</span>
+          </div>
+        </a>
+        <a class="cert" href="certificates/dqlab-eda-python.pdf" target="_blank" rel="noopener" aria-label="Lihat sertifikat Exploratory Data Analysis with Python for Beginner">
+          <div class="cert__img"><img src="certificates/dqlab-eda-python.jpg" alt="Sertifikat Exploratory Data Analysis with Python for Beginner" loading="lazy"></div>
+          <div class="cert__body">
+            <span class="cert__tag">Python</span>
+            <h3>Exploratory Data Analysis with Python for Beginner</h3>
+            <p>DQLab · 02 Nov 2026</p>
+            <span class="cert__id">ID: DQLABINTP1FBUGFP</span>
+          </div>
+        </a>
+        <a class="cert" href="certificates/dqlab-python-beginner-1.pdf" target="_blank" rel="noopener" aria-label="Lihat sertifikat Python for Data Professional Beginner - Part 1">
+          <div class="cert__img"><img src="certificates/dqlab-python-beginner-1.jpg" alt="Sertifikat Python for Data Professional Beginner - Part 1" loading="lazy"></div>
+          <div class="cert__body">
+            <span class="cert__tag">Python</span>
+            <h3>Python for Data Professional Beginner - Part 1</h3>
+            <p>DQLab · 25 Okt 2026</p>
+            <span class="cert__id">ID: DQLABINTP1UHJTQD</span>
+          </div>
+        </a>
+        <a class="cert" href="certificates/dqlab-sql-sales-performance.pdf" target="_blank" rel="noopener" aria-label="Lihat sertifikat Project Data Analysis for Retail: Sales Performance Report">
+          <div class="cert__img"><img src="certificates/dqlab-sql-sales-performance.jpg" alt="Sertifikat Project Data Analysis for Retail: Sales Performance Report" loading="lazy"></div>
+          <div class="cert__body">
+            <span class="cert__tag">SQL</span>
+            <h3>Project Data Analysis for Retail: Sales Performance Report</h3>
+            <p>DQLab · 26 Okt 2026</p>
+            <span class="cert__id">ID: DQLABPRJC4VPCBGE</span>
+          </div>
+        </a>
+        <a class="cert" href="certificates/dqlab-sql-select.pdf" target="_blank" rel="noopener" aria-label="Lihat sertifikat Fundamental SQL Using SELECT Statement">
+          <div class="cert__img"><img src="certificates/dqlab-sql-select.jpg" alt="Sertifikat Fundamental SQL Using SELECT Statement" loading="lazy"></div>
+          <div class="cert__body">
+            <span class="cert__tag">SQL</span>
+            <h3>Fundamental SQL Using SELECT Statement</h3>
+            <p>DQLab · 23 Okt 2026</p>
+            <span class="cert__id">ID: DQLABSQLT1IQGODO</span>
+          </div>
+        </a>
+        <a class="cert" href="certificates/dqlab-sql-database-management.pdf" target="_blank" rel="noopener" aria-label="Lihat sertifikat SQL Database Management">
+          <div class="cert__img"><img src="certificates/dqlab-sql-database-management.jpg" alt="Sertifikat SQL Database Management" loading="lazy"></div>
+          <div class="cert__body">
+            <span class="cert__tag">SQL</span>
+            <h3>SQL Database Management</h3>
+            <p>DQLab · 22 Okt 2026</p>
+            <span class="cert__id">ID: DQLABSQLDMDBLWVF</span>
+          </div>
+        </a>
+        <a class="cert" href="certificates/dicoding-dasar-sql.pdf" target="_blank" rel="noopener" aria-label="Lihat sertifikat Belajar Dasar Structured Query Language (SQL)">
+          <div class="cert__img"><img src="certificates/dicoding-dasar-sql.jpg" alt="Sertifikat Belajar Dasar Structured Query Language (SQL)" loading="lazy"></div>
+          <div class="cert__body">
+            <span class="cert__tag">SQL</span>
+            <h3>Belajar Dasar Structured Query Language (SQL)</h3>
+            <p>Dicoding · 13 Sep 2026</p>
+            <span class="cert__id">ID: JMZVL91GOXN9</span>
+          </div>
+        </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LET'S CONNECT ============ -->
+    <section class="section" id="connect">
+      <h2 class="section__title reveal">Let's Connect</h2>
+      <p class="section__lead reveal">Tertarik bekerja sama atau ingin ngobrol soal data? Hubungi saya lewat tautan di bawah.</p>
+
+      <!-- Blok penutup: nama, menu, ikon sosial, copyright -->
+      <div class="reachout reveal">
+        <h3 class="reachout__name">Abdul Aziz Muktadir</h3>
+
+        <nav class="reachout__nav" aria-label="Navigasi bawah">
+          <a href="#home">Home</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Project</a>
+          <a href="#education">Education</a>
+          <a href="#certificates">Sertifikat</a>
+          <a href="#connect">Contact</a>
+        </nav>
+
+        <div class="reachout__icons">
+          <a href="https://github.com/AzizMktdr" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/abdul-aziz-muktadir/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11.5H3V9.75Zm6.5 0h3.83v1.57h.06c.53-1 1.84-2.07 3.78-2.07 4.04 0 4.78 2.66 4.78 6.12v5.88h-4v-5.21c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75v5.3h-4V9.75Z"/></svg>
+          </a>
+          <a href="mailto:azismktdr@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M3 5.5A2.5 2.5 0 0 1 5.5 3h13A2.5 2.5 0 0 1 21 5.5v.38l-9 5.62-9-5.62V5.5Zm0 2.74V18.5A2.5 2.5 0 0 0 5.5 21h13a2.5 2.5 0 0 0 2.5-2.5V8.24l-8.47 5.29a1 1 0 0 1-1.06 0L3 8.24Z"/></svg>
+          </a>
+        </div>
+
+        <hr class="reachout__line">
+        <p class="reachout__copy">© <span id="year">2026</span> <span class="reachout__blue">Abdul Aziz Muktadir</span>. Portfolio.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

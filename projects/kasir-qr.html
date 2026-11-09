@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Pembayaran dan Kasir Berbasis QR Code | Abdul Aziz Muktadir</title>
+  <meta name="description" content="Rancangan sistem pembayaran dan kasir berbasis QR Code, dari analisis sampai prototipe.">
+  <script>(function(){var d=document.documentElement;d.classList.add('js');var s=null;try{s=localStorage.getItem('theme')}catch(e){}var dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;d.setAttribute('data-theme',s||(dark?'dark':'light'));})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="detail-page">
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 10.5h10.6L20.5 7H6.4M9.5 19.5h.01M17 19.5h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bottle" viewBox="0 0 24 24"><path d="M9 3h6v3H9zM8 6h8l1.5 3.5V19a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9.5L8 6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h2v2h-2zM18 14h2v2h-2zM14 18h2v2h-2zM18 18h2v2h-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <header class="island" id="island">
+    <a href="../index.html#home" class="island__logo" aria-label="Beranda"><img src="../images/foto.jpg" alt="" onerror="this.replaceWith('A')"></a>
+
+    <div class="island__body"><div class="island__inner">
+
+    <nav class="island__nav" id="nav" aria-label="Navigasi utama">
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#projects">Project</a>
+      <a href="../index.html#education">Education</a>
+      <a href="../index.html#connect" class="nav-extra">Contact</a>
+    </nav>
+
+    <a href="../CV.pdf" target="_blank" rel="noopener" class="island__cv">Lihat CV</a>
+
+    <a href="../index.html#connect" class="island__cta">
+      Let's Connect
+      <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+
+    <button class="island__btn" id="themeToggle" aria-label="Ganti tema">
+      <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" fill="currentColor"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>
+    </button>
+
+    <button class="island__btn island__menu" id="menuToggle" aria-label="Buka menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    </div></div>
+  </header>
+
+  <main>
+    <div class="pd pd--da">
+
+      <!-- Kiri: judul dan angka utama -->
+      <div class="pd__side pd__head">
+        <a class="pd__back reveal" href="../index.html#projects">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Kembali
+        </a>
+
+        <div class="pd__icon reveal" style="--d:.05s"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-qr"/></svg></div>
+        <p class="pd__type reveal" style="--d:.1s">Academic Project · System Analyst &amp; Designer · Tim 3 orang</p>
+        <h1 class="pd__title reveal" style="--d:.15s">Rancangan sistem pembayaran dan kasir berbasis QR Code, dari analisis sampai prototipe.</h1>
+        <div class="stats pd__stats reveal" style="--d:.2s"><div class="stat"><strong>8</strong><span>kebutuhan fungsional</span></div><div class="stat"><strong>5</strong><span>tabel database</span></div><div class="stat"><strong>4</strong><span>sequence diagram</span></div><div class="stat"><strong>2</strong><span>metode bayar: tunai &amp; QRIS</span></div></div>
+      </div>
+
+      <!-- Kolom kanan: visual preview -->
+      <div class="pd__main">
+        <h2 class="reveal">Visual preview</h2>
+        <p class="pd__lead reveal">Prototipe Figma: input kode pesanan, detail pesanan, dan pemilihan metode pembayaran.</p>
+
+        <div class="pd__shots">
+          <div class="glow reveal"><div class="preview">
+            <div class="ph"><svg viewBox="0 0 24 24"><use href="#i-qr"/></svg><span>Tambahkan images/kasir-qr.png</span></div>
+            <img src="../images/kasir-qr.png" alt="Prototipe Sistem Pembayaran dan Kasir Berbasis QR Code" loading="lazy" onerror="this.remove()">
+          </div></div>
+        </div>
+      </div>
+
+      <!-- Bawah: konten selebar halaman -->
+      <div class="pd__rest">
+        <section class="pd__section reveal">
+          <p class="pd__label">Kebutuhan fungsional</p>
+          <ol class="pd__qs"><li><strong>Memproses kode pesanan</strong><span>Menerima kode unik atau barcode dari pelanggan, memvalidasinya, lalu menghubungkannya dengan data pesanan di database.</span></li><li><strong>Menampilkan pesanan dan total harga</strong><span>Daftar item dan total harga dihitung otomatis, dengan layar konfirmasi rincian pesanan untuk kasir.</span></li><li><strong>Proses pembayaran</strong><span>Metode tunai dan QRIS, penerimaan nominal bayar, dan perhitungan kembalian.</span></li><li><strong>Memberi struk</strong><span>Mencetak struk transaksi dan menyimpannya di database untuk laporan dan rekap.</span></li><li><strong>Memberi kode pesanan</strong><span>Pelanggan memperoleh kode pesanan lewat aplikasi pemesanan atau sistem antrian yang terhubung dengan meja.</span></li><li><strong>Bayar pesanan</strong><span>Pelanggan melihat total tagihan, metode pembayaran, dan konfirmasi bahwa transaksi berhasil.</span></li><li><strong>Menerima struk</strong><span>Struk dapat diterima dalam bentuk fisik maupun digital.</span></li><li><strong>Laporan penjualan</strong><span>Rekap penjualan harian, mingguan, dan bulanan untuk manajemen.</span></li></ol>
+        </section>
+
+        <section class="pd__section reveal">
+          <p class="pd__label">Perancangan sistem</p>
+          <div class="pd__figs"><figure class="pd__fig reveal"><a href="../images/kasir-usecase.png" target="_blank" rel="noopener" aria-label="Buka Use Case Diagram ukuran penuh"><img src="../images/kasir-usecase.png" alt="Use Case Diagram sistem kasir QR Code" loading="lazy"></a><figcaption><strong>Use Case Diagram</strong><span>Dua aktor, Pelanggan dan Kasir, dengan relasi include pada tiap proses.</span></figcaption></figure><figure class="pd__fig reveal"><a href="../images/kasir-activity.png" target="_blank" rel="noopener" aria-label="Buka Activity Diagram ukuran penuh"><img src="../images/kasir-activity.png" alt="Activity Diagram sistem kasir QR Code" loading="lazy"></a><figcaption><strong>Activity Diagram</strong><span>Alur utama dari melihat menu, memesan, sampai pembayaran selesai.</span></figcaption></figure><figure class="pd__fig reveal"><a href="../images/kasir-activity-bayar.png" target="_blank" rel="noopener" aria-label="Buka Activity Diagram: Bayar Pesanan ukuran penuh"><img src="../images/kasir-activity-bayar.png" alt="Activity Diagram: Bayar Pesanan sistem kasir QR Code" loading="lazy"></a><figcaption><strong>Activity Diagram: Bayar Pesanan</strong><span>Percabangan metode bayar tunai dan QRIS sampai transaksi selesai.</span></figcaption></figure><figure class="pd__fig reveal"><a href="../images/kasir-erd.png" target="_blank" rel="noopener" aria-label="Buka Entity Relationship Diagram ukuran penuh"><img src="../images/kasir-erd.png" alt="Entity Relationship Diagram sistem kasir QR Code" loading="lazy"></a><figcaption><strong>Entity Relationship Diagram</strong><span>Relasi pelanggan, kasir, pesanan, detail pesanan, dan pembayaran.</span></figcaption></figure><figure class="pd__fig reveal"><a href="../images/kasir-class.png" target="_blank" rel="noopener" aria-label="Buka Class Diagram ukuran penuh"><img src="../images/kasir-class.png" alt="Class Diagram sistem kasir QR Code" loading="lazy"></a><figcaption><strong>Class Diagram</strong><span>Lima kelas beserta atribut, primary key, dan foreign key.</span></figcaption></figure><figure class="pd__fig reveal"><a href="../images/kasir-sequence-bayar.png" target="_blank" rel="noopener" aria-label="Buka Sequence Diagram: Bayar Pesanan ukuran penuh"><img src="../images/kasir-sequence-bayar.png" alt="Sequence Diagram: Bayar Pesanan sistem kasir QR Code" loading="lazy"></a><figcaption><strong>Sequence Diagram: Bayar Pesanan</strong><span>Interaksi antar objek untuk pembayaran QRIS dan tunai.</span></figcaption></figure></div>
+        </section>
+
+        <section class="pd__section reveal">
+          <p class="pd__label">Prototipe antarmuka</p>
+          <figure class="pd__fig pd__fig--wide">
+            <a href="../images/kasir-qr-2.png" target="_blank" rel="noopener" aria-label="Buka prototipe ukuran penuh"><img src="../images/kasir-qr-2.png" alt="Prototipe pembayaran non-tunai, tunai, dan struk" loading="lazy"></a>
+            <figcaption><strong>Pembayaran non-tunai (QRIS), tunai, dan struk</strong><span>Alur lengkap setelah pelanggan memilih metode pembayaran, sampai struk ditampilkan.</span></figcaption>
+          </figure>
+        </section>
+
+        <div class="pd__cols">
+          <div class="pd__col">
+            <section class="pd__section reveal">
+              <p class="pd__label">Overview</p>
+              <div class="pd__text">
+                <p>Kasir kafe yang masih manual membuat antrian panjang saat jam sibuk, rawan salah input dan salah hitung, serta menyulitkan pembuatan laporan penjualan. Proyek ini merancang sistem kasir dengan pemesanan lewat barcode di meja: pelanggan memberikan kode pesanan, sistem menampilkan rincian dan total otomatis, lalu pembayaran tunai atau QRIS diproses sampai struk tercetak.</p>
+                <p>Project kelompok tiga orang untuk mata kuliah Analisis dan Desain Perangkat Lunak, dengan studi kasus kedai kopi lokal di Tangerang. Data dikumpulkan lewat observasi, wawancara, dan studi pustaka. Peran saya System Analyst dan Designer: analisis kebutuhan, Use Case, Activity Diagram, ERD, struktur data, dan prototipe Figma. Proyek ini belum memasuki implementasi kode.</p>
+              </div>
+            </section>
+
+            <section class="pd__section reveal">
+              <p class="pd__label">Permasalahan dan solusi</p>
+              <ul class="pd__dl"><li><strong>Kesalahan input kode pesanan</strong><span>Validasi otomatis: sistem memberi notifikasi jika kode tidak valid atau tidak ditemukan.</span></li><li><strong>Proses input memakan waktu</strong><span>Autocomplete atau dropdown untuk mencari berdasarkan kode atau nama produk.</span></li><li><strong>Keterbatasan perangkat</strong><span>Sistem dioptimalkan agar tetap responsif walaupun tanpa scanner barcode.</span></li><li><strong>Kasir belum terbiasa dengan kode produk</strong><span>Pelatihan kasir agar bisa menginput dengan cepat dan benar.</span></li><li><strong>Gangguan perangkat keras</strong><span>Menyediakan perangkat input cadangan.</span></li></ul>
+            </section>
+
+            <section class="pd__section reveal">
+              <p class="pd__label">Kesimpulan dan saran</p>
+              <div class="pd__text">
+                <p>Sistem yang dirancang mempercepat input pesanan, meminimalkan kesalahan input manual, dan mencatat seluruh transaksi dari pemesanan, pembayaran, sampai struk secara otomatis. Integrasi QRIS memudahkan pembayaran non-tunai.</p>
+                <p>Saran pengembangan: manajemen stok yang terintegrasi dengan transaksi, sistem berbasis cloud agar data bisa diakses kapan saja, laporan keuangan yang lebih detail (laba rugi, pengeluaran, pembelian bahan baku), dan pelatihan kasir secara berkala.</p>
+              </div>
+            </section>
+          </div>
+
+          <div class="pd__col">
+            <section class="pd__section reveal">
+              <p class="pd__label">Aktor</p>
+              <ul class="pd__dl">
+                <li><strong>Pelanggan</strong><span>Memberi kode pesanan, membayar, dan menerima struk.</span></li>
+                <li><strong>Kasir</strong><span>Memproses kode, mengonfirmasi pesanan dan pembayaran, serta mencetak struk.</span></li>
+              </ul>
+            </section>
+
+            <section class="pd__section reveal">
+              <p class="pd__label">Stack</p>
+              <div class="project__tags pd__stack"><span>Figma</span><span>UML</span><span>ERD</span><span>LRS</span><span>Class Diagram</span><span>Sequence Diagram</span></div>
+            </section>
+
+            <section class="pd__section reveal">
+              <p class="pd__label">Basis data (5 tabel)</p>
+              <div class="project__tags pd__stack"><span>pelanggan</span><span>kasir</span><span>pesanan</span><span>detail_pesanan</span><span>pembayaran</span></div>
+            </section>
+
+            <section class="pd__section reveal">
+              <p class="pd__label">Rancangan input</p>
+              <div class="project__tags pd__stack"><span>Kode pesanan</span><span>Nama pelanggan</span><span>Data pesanan</span><span>Metode pembayaran</span><span>Nominal tunai</span><span>Konfirmasi QRIS</span></div>
+            </section>
+
+            <section class="pd__section reveal">
+              <p class="pd__label">Rancangan output</p>
+              <div class="project__tags pd__stack"><span>Detail pesanan</span><span>Status pembayaran</span><span>Kembalian</span><span>Struk (layar, cetak, PDF)</span><span>Laporan penjualan</span></div>
+            </section>
+
+            <section class="pd__section reveal">
+              <p class="pd__label">Kebutuhan hardware dan software</p>
+              <ul class="pd__dl">
+                <li><strong>Hardware</strong><span>POS Intel Core i3, RAM 4 GB, SSD 128 GB; thermal printer 58/80 mm; cash drawer; router minimal 100 Mbps.</span></li>
+                <li><strong>Software</strong><span>Windows 10/11, MySQL atau MariaDB, Laravel atau PHP, Apache, Google Chrome, dan QRIS API.</span></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project lainnya -->
+    <section class="others">
+      <h2 class="subtitle reveal">Project lainnya</h2>
+      <div class="grid grid--2">
+        <a class="pcard reveal" href="amazon-sales.html" aria-label="Lihat detail Amazon Sales Performance Analysis">
+          <div class="glow"><div class="preview">
+            <div class="ph"><svg viewBox="0 0 24 24"><use href="#i-chart"/></svg><span>Preview project</span></div>
+            <img src="../images/amazon-sales.png" alt="Dashboard Amazon Sales Performance Analysis" loading="lazy" onerror="this.remove()">
+          </div></div>
+          <h3>Amazon Sales Performance Analysis</h3>
+        </a>
+        <a class="pcard reveal" style="--d:.08s" href="wisata-lima-kota.html" aria-label="Lihat detail Analisis Destinasi Wisata Lima Kota">
+          <div class="glow"><div class="preview">
+            <div class="ph"><svg viewBox="0 0 24 24"><use href="#i-map"/></svg><span>Preview project</span></div>
+            <img src="../images/wisata-lima-kota.png" alt="Dashboard Analisis Destinasi Wisata Lima Kota" loading="lazy" onerror="this.remove()">
+          </div></div>
+          <h3>Analisis Destinasi Wisata Lima Kota</h3>
+        </a>
+        <a class="pcard reveal" href="unilever-sales.html" aria-label="Lihat detail Unilever Sales Analysis">
+          <div class="glow"><div class="preview">
+            <div class="ph"><svg viewBox="0 0 24 24"><use href="#i-cart"/></svg><span>Preview project</span></div>
+            <img src="../images/unilever-sales.png" alt="Dashboard Unilever Sales Analysis" loading="lazy" onerror="this.remove()">
+          </div></div>
+          <h3>Unilever Sales Analysis</h3>
+        </a>
+        <a class="pcard reveal" style="--d:.08s" href="sales-dashboard.html" aria-label="Lihat detail Sales Performance Dashboard">
+          <div class="glow"><div class="preview">
+            <div class="ph"><svg viewBox="0 0 24 24"><use href="#i-chart"/></svg><span>Preview project</span></div>
+            <img src="../images/sales-dashboard.png" alt="Dashboard Sales Performance" loading="lazy" onerror="this.remove()">
+          </div></div>
+          <h3>Sales Performance Dashboard</h3>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pd-footer">
+    <p>© <span id="year">2026</span> <span class="pd-footer__name">Abdul Aziz Muktadir</span>. Portfolio.</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
